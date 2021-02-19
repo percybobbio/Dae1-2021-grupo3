@@ -14,16 +14,16 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-        <link rel="stylesheet" href="resources/css/style.css">        
+        <link rel="stylesheet" href="resources/css/style.css">    
     </head>
     <body>
     <header id="main-header">
         <div class="container">
             <h1>CINERAMA - Producción y Cine</h1>
         </div>
-    </header>
-        <%@include file="WEB-INF/jspf/navegacion.jspf" %>
-        <%@include file="WEB-INF/jspf/carrousel.jspf" %>
+    </header> 
+        <%@include file="WEB-INF/jspf/navegacion2.jspf" %>
+        <%@include file="WEB-INF/jspf/carrousel2.jspf" %>
         <%@include file="WEB-INF/jspf/scripts.jspf" %>
         
         <section id="informacion" class="padded text-justify">

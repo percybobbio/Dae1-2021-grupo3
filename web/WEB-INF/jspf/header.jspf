@@ -1,5 +1,14 @@
-<header>
-    <div class="container accordion-body">
-        <img src="resources/img/marca.jpg" width="550">        
-    </div>
-</header>
+    <header id="main-header">
+        <style>
+            .titulo h1{
+                align-content: center;
+                text-align: center;
+            }
+            
+        </style>
+        <div class="container">
+            <div class="row titulo">
+                <h1>CINERAMA - Producción y Cine</h1>
+            </div>
+        </div>
+    </header> 
