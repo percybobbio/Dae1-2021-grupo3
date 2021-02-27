@@ -17,11 +17,7 @@
         <link rel="stylesheet" href="resources/css/style.css">        
     </head>
     <body>
-    <header id="main-header">
-        <div class="container">
-            <h1>CINERAMA - Producción y Cine</h1>
-        </div>
-    </header>
+        <%@include file="WEB-INF/jspf/header.jspf"%>
         <%@include file="WEB-INF/jspf/navegacion.jspf" %>
         <%@include file="WEB-INF/jspf/carrousel.jspf" %>
         <%@include file="WEB-INF/jspf/scripts.jspf" %>

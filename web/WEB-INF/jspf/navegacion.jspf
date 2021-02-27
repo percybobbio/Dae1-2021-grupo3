@@ -11,7 +11,7 @@
             <a class="nav-link" href="index.jsp">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#informacion">Información</a>
+            <a class="nav-link" href="adminpeliculas.jsp">Información</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#funcionarios">Funcionarios</a>
@@ -25,11 +25,17 @@
           <li class="nav-item">
             <a class="nav-link" href="#ubicanos">Ubícanos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Términos y condiciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">política de privacidad</a>
+          </li>
         </ul>
             
        <ul class="navbar-nav mr-right">
         <li class="nav-item">
-          <a class="nav-link" href="https://www.facebook.com/pages/Cinerama%20El%20Pac%C3%ADfico/125848148043544"><i class="fab fa-facebook-f"></i></a>
+          <a class="nav-link" href="https://www.facebook.com/Cinerama-El-Pac%C3%ADfico-1218364891641961"><i class="fab fa-facebook-f"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/cineramaclube"><i class="fab fa-twitter"></i></a>

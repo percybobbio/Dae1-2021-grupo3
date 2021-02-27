@@ -1,7 +1,7 @@
 <%-- 
-    Document   : errorcine
-    Created on : 18-feb-2021, 23:14:59
-    Author     : REIV5
+    Document   : login
+    Created on : 30 ene. 2021, 21:20:46
+    Author     : aecb1
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,22 +17,24 @@
         <link rel="stylesheet" href="resources/css/style.css">  
     </head>
     <body>
+        
         <%@include file="WEB-INF/jspf/header.jspf" %>
-                
-        <section>
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Error en registro</h5>
-                  <p class="card-text">Verificar los datos ingresados en nombre y/o contraseña</p>
-                  <a href="index.jsp" class="btn btn-primary">Ir a pagina principal</a>
-                </div>
-              </div>            
-        </section>
+        <%@include file="WEB-INF/jspf/navegacionerror.jspf" %>
         
+        <img src="resources/img/montanas.jpeg" class="d-block w-100" alt="...">
         
-        <%@include file="WEB-INF/jspf/scripts.jspf" %>  
-   
-
+          <section id="errorlogin" class="padded">
+            <div class="container">
+                <p></p>
+              <h2>Contraseña y/o usuario incorrecto.</h2>
+                <div class="row text-justify">
+                    
+                    <article class="col-lg">
+                        <p>Asegúrate haber insertado correctamente tu usuario o contraseña, verifica que tu nombre de usuario y contraseña coincidan con tu registro, si aún no te has registrado, pulsa al botón de registarse y crea una nueva cuenta.</p>
+                        
+        
+        <%@include file="WEB-INF/jspf/scripts.jspf" %>
+        
+    
     </body>
 </html>

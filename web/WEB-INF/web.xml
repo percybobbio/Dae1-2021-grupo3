@@ -4,9 +4,33 @@
         <servlet-name>UserCineramaController</servlet-name>
         <servlet-class>com.cinerama.controllers.UserCineramaController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PeliculaCineramaController</servlet-name>
+        <servlet-class>com.cinerama.controllers.PeliculaCineramaController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Validar</servlet-name>
+        <servlet-class>com.cinerama.controllers.Validar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Controlador</servlet-name>
+        <servlet-class>com.cinerama.controllers.Controlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserCineramaController</servlet-name>
         <url-pattern>/usercineramacontroller</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PeliculaCineramaController</servlet-name>
+        <url-pattern>/peliculacineramacontroller</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Validar</servlet-name>
+        <url-pattern>/Validar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador</servlet-name>
+        <url-pattern>/Controlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

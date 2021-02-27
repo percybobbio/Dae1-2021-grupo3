@@ -1,56 +1,69 @@
 <%-- 
-    Document   : registro
-    Created on : 30 ene. 2021, 21:40:16
-    Author     : aecb1
+    Document   : detallepeliculas
+    Created on : 23-feb-2021, 19:07:10
+    Author     : REIV5
 --%>
+<%@page import="com.cinerama.entidades.PeliculasCinerama"%>
+<%
+
+    PeliculasCinerama pelicula = (PeliculasCinerama)request.getSession().getAttribute("peliculas");
+%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <%@include file="WEB-INF/jspf/meta.jspf" %>
+        <%@include file="../WEB-INF/jspf/meta.jspf" %>
         <title>Cinerama - Producción y Cine</title>
-        <%@include file="WEB-INF/jspf/styles.jspf" %>
+        <%@include file="../WEB-INF/jspf/styles.jspf" %>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
         <link rel="stylesheet" href="resources/css/style.css">
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/header.jspf" %>
-        <%@include file="WEB-INF/jspf/navegacion4.jspf" %>
-        <section id="registro" class="padded">
+        <%@include file="../WEB-INF/jspf/header.jspf" %>
+        <%@include file="../WEB-INF/jspf/navegacion2.jspf" %>
+<p></p> 
+<section id="detalle-pelicula">
             <div class ="container-fluid">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-3">
-                        <div class="card">
-                            <h5 class="card-header"><i class="fas fa-user-plus"></i> &nbsp;Registro</h5>
-                            <div class="card-body">
-                                <form action="usercineramacontroller" method="POST">
-                                    <input type="hidden" name="txtProceso" id="txtProceso" value="registrar">
-                                    <div class="mb-3">
-                                        <label for="txtUsuario" class="form-label"><i class="fas fa-marker"></i>&nbsp;&nbsp;Nombre de Usuario</label>
-                                        <input type="text" class="form-control" id="txtUsuario" name="txtUsuario" required="" placeholder="Ingresar nombre de usuario">
-                                
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="txtClave" class="form-label"><i class="fas fa-lock"></i>&nbsp;&nbsp;Crear Clave</label>
-                                        <input type="password" class="form-control" id="txtClave" name="txtClave" required="" placeholder="Ingrese Contraseña">
-                                    </div>
-                                   
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Acepto todos los terminos y condiciones</label>
-                                    </div>
-                                    <button class="btn btn-success col-12" type="submit">Registrar</button>
-                                </form>
-                            </div>
+                    <div class="card">
+                        <div class="card-header">
+                            Película en estreno seleccionado:
                         </div>
-                    </div> 
+                        <div class="card-body">
+                            <h6 class="card-title">Detalle de la película:</h6>
+                            <form action="peliculacineramacontroller" method="POST">
+                                <input type="hidden" name="txtProcesoPelicula" id="txtProcesoPelicula" value="actualizar">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">ID</label>
+                                    <input type="text" class="form-control" id="txtID" placeholder="ID" value="<%=pelicula.getMovieID()%>" readonly="" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nombre:</label>
+                                    <input type="text" class="form-control" id="txtNombrePelicula" placeholder="Nombre de la película" value="<%=pelicula.getPelicula()%>" readonly="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Categoría:</label>
+                                    <input type="text" class="form-control" id="txtCategoriaPelicula" placeholder="Categoría de la película " value="<%=pelicula.getGenero()%>">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Editar</button>
+                                <button type="submit" class="btn btn-primary">Listar</button>
+                                <button type="submit" class="btn btn-primary">Eliminar</button>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
                 </div> 
             </div>
         </section>
-    "<img src="resources/img/portada-unete-a-nosotros.jpeg" class="d-block w-100" alt="...">"
+        <p></p>
+        
+        <%@include file="../WEB-INF/jspf/scripts.jspf" %>
+        
     <section id="galeria" class="padded">
       <div class="container">
         <h2>Galería:</h2>
@@ -77,7 +90,10 @@
       <p>⠀⠀</p>
    </section>
         
-        <%@include file="WEB-INF/jspf/footer.jspf" %>
-        <%@include file="WEB-INF/jspf/scripts.jspf" %>
+        <%-- <%@include file="WEB-INF/jspf/footer8.jspf" %>--%>
+    </body>
+</html>
+        
+        <%@include file="../WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

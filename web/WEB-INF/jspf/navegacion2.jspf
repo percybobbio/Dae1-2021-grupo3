@@ -8,7 +8,9 @@
         <ul class="navbar-nav mr-auto" id="menu-main">
 
 
-          
+          <li class="nav-item">
+            <a class="nav-link" href="indexcine2.jsp">Inicio</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Información
@@ -32,20 +34,24 @@
               Cartelera
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Estrenos</a>
+              <a class="dropdown-item" href="lista-estrenos.jsp">Lista de Estrenos</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Proximamente</a>
           </div>
-
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Combos</a>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Registros
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link" href="peliculacineramacontroller?txtProcesoPelicula=seleccionarTodo">Listar películas</a>
+              <div class="dropdown-divider"></div>
+            <a class="nav-link" href="lista-usuarios.jsp">Lista de usuarios</a>
+          </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Comentarios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Galerías</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Términos y condiciones</a>
@@ -59,7 +65,7 @@
             
        <ul class="navbar-nav mr-right">
         <li class="nav-item">
-          <a class="nav-link" href="https://www.facebook.com/pages/Cinerama%20El%20Pac%C3%ADfico/125848148043544"><i class="fab fa-facebook-f"></i></a>
+          <a class="nav-link" href="https://www.facebook.com/Cinerama-El-Pac%C3%ADfico-1218364891641961"><i class="fab fa-facebook-f"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/cineramaclube"><i class="fab fa-twitter"></i></a>

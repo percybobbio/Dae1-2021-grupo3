@@ -15,8 +15,8 @@ import com.cinerama.entidades.UsuarioCinerama;
 public class TestUsuarioCinerama {
     public static void main(String[] args){
         UsuarioCinerama usuario = new UsuarioCinerama();
-        usuario.setUsuario("jose");
-        usuario.setContrasena("123456");
+        //usuario.setUsuario("jose");
+        //usuario.setContrasena("123456");
         //usuario.setTipo("usuario");
         //usuario.setEstado(1);
         
@@ -41,6 +41,7 @@ public class TestUsuarioCinerama {
           UsuarioCinerama usuario2 = usuariocine.loginUser(usuario1);
           if(usuario2!=null){
               System.out.println("El usuario es: "+usuario2.getUsuario());
+              System.out.println("El tipo es: "+usuario2.getTipo());
           }else{
               System.out.println("Error de loguin del usuario");
           }

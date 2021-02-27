@@ -17,11 +17,7 @@
         <link rel="stylesheet" href="resources/css/style.css">    
     </head>
     <body>
-    <header id="main-header">
-        <div class="container">
-            <h1>CINERAMA - Producción y Cine</h1>
-        </div>
-    </header> 
+    <%@include file="WEB-INF/jspf/header.jspf" %>
         <%@include file="WEB-INF/jspf/navegacion2.jspf" %>
         <%@include file="WEB-INF/jspf/carrousel2.jspf" %>
         <%@include file="WEB-INF/jspf/scripts.jspf" %>
@@ -32,7 +28,7 @@
           <div class="row">
 
             <article class="col-lg">
-                  <h3>Nosotros:</h3>
+                  <h3>Nosotros</h3>
                   <p>Cinerama es una cadena de cine peruana y la mejor exhibición cinematográfica que cuenta con 46 complejos de cine, de los cuáles 36 se encuentran en el Perú, siempre encontrarás uno cerca de tí.</p>
                   <p>Nuestro compromiso como empresa profesional es conectar y alegrar la vida de las personas, en donde ofreceremos mucho más que películas, nuevas ofertas y pop-corn.</p>
                   <figure class="col-md-6">

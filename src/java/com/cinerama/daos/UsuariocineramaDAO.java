@@ -6,10 +6,12 @@
 package com.cinerama.daos;
 
 import Controlador.Conexion;
+import com.cinerama.entidades.PeliculasCinerama;
 import com.cinerama.entidades.UsuarioCinerama;
 import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -62,7 +64,27 @@ public class UsuariocineramaDAO implements InterfaceUsuario {
 
     @Override
     public List<UsuarioCinerama> seleccionarTodo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<UsuarioCinerama> listusuario = new ArrayList<>();
+        final String SQL_SELECT = "{CALL usp_SeleccionarTodoUser()}";
+        try {
+            cstm = con.getConnection().prepareCall(SQL_SELECT);
+            res = cstm.executeQuery();
+            while (res.next()) {
+                UsuarioCinerama usuario = new UsuarioCinerama();
+                usuario.setUserID(res.getInt(1));
+                usuario.setUsuario(res.getString(2));
+                usuario.setContrasena(res.getString(3));
+                usuario.setTipo(res.getString(4));
+                usuario.setEstado(res.getInt(5));
+                listusuario.add(usuario);
+            }
+        } catch (Exception e) {
+            System.out.println("Error en listarTodo");
+            e.printStackTrace();
+        }finally{
+            close();
+        }
+        return listusuario;
     }
 
     @Override

@@ -96,7 +96,7 @@ public class UserCineramaController extends HttpServlet {
             usuario.setEstado(1);
             UsuariocineramaDAO usuarioDAO = new UsuariocineramaDAO();
             if (usuarioDAO.insertar(usuario)) {
-                request.getRequestDispatcher("index2.jsp").forward(request, response);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
             }else{
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             }
@@ -116,6 +116,7 @@ public class UserCineramaController extends HttpServlet {
             usuario.setContrasena(clave);
             UsuariocineramaDAO usuariocineDAO = new UsuariocineramaDAO();
             UsuarioCinerama usuarioFlag = usuariocineDAO.loginUser(usuario);
+            request.getSession().setAttribute("usuario", usuario);
             if(usuarioFlag!=null){
                 sessionIn.setAttribute("nombre", usuarioFlag.getUsuario());
                 sessionIn.setAttribute("tipo", usuarioFlag.getTipo());
