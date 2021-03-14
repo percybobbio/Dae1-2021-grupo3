@@ -43,7 +43,7 @@
               Registros
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="nav-link" href="buscar-peliculas.jsp">Buscar películas</a>
+            <a class="nav-link" href="peliculacineramacontroller?txtProcesoPelicula=seleccionarTodo">Buscar películas</a>
               <div class="dropdown-divider"></div>
             <a class="nav-link" href="#">Lista de usuarios</a>
           </div>

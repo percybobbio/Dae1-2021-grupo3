@@ -125,7 +125,7 @@ public class PeliculaCineramaController extends HttpServlet {
             if (peliculaDAO.actualizar(pelicula2)) {
                 request.getRequestDispatcher("peliculacineramacontroller?txtProcesoPelicula=seleccionarTodo").forward(request, response);
             }else{
-                request.getRequestDispatcher("errorcine.jsp").forward(request, response);
+                request.getRequestDispatcher("peliculacineramacontroller?txtProcesoPelicula=seleccionarTodo").forward(request, response);
             }
             }  
     }
