@@ -17,14 +17,14 @@ import java.util.List;
 public class TestPeliculas {
     public static void main(String[] args){
         PeliculasCinerama pelicula = new PeliculasCinerama();
-        pelicula.setMovieID(13);
-        pelicula.setPelicula("Top Gun");
-        pelicula.setEstreno("11 de Julio");
-        pelicula.setGenero("Acción y Drama");
-        pelicula.setDirector("Joseph Cosinky");
-        pelicula.setReparto("Tom Cruise, Val Kilmer, Ed Harris");
-        pelicula.setDescripcion("Después de más de treinta años de servicio como uno de los mejores aviadores de la Armada, Pete “Maverick” Mitchell (Tom Cruise) está donde pertenece, como un valiente piloto de prueba");
-        //pelicula.setMovieID(15);
+//        pelicula.setMovieID(13);
+//        pelicula.setPelicula("Top Gun");
+//        pelicula.setEstreno("11 de Julio");
+//        pelicula.setGenero("Acción y Drama");
+//        pelicula.setDirector("Joseph Cosinky");
+//        pelicula.setReparto("Tom Cruise, Val Kilmer, Ed Harris");
+//        pelicula.setDescripcion("Después de más de treinta años de servicio como uno de los mejores aviadores de la Armada, Pete “Maverick” Mitchell (Tom Cruise) está donde pertenece, como un valiente piloto de prueba");
+//        //pelicula.setMovieID(15);
         PeliculacineramaDAO peliculacine = new PeliculacineramaDAO();
         
 //        if (peliculacine.insertar(pelicula)) {
@@ -33,11 +33,11 @@ public class TestPeliculas {
 //            System.out.println("Error en insercion");
 //        }
         
-        if (peliculacine.actualizar(pelicula)) {
-            System.out.println("Actualizo correctamente");
-        }else{
-            System.out.println("Error en actualizacion");
-        }
+//        if (peliculacine.actualizar(pelicula)) {
+//            System.out.println("Actualizo correctamente");
+//        }else{
+//            System.out.println("Error en actualizacion");
+//        }
 //        
 //        if (peliculacine.eliminar(15)) {
 //            System.out.println("Se elimino correctamente la pelicula");
@@ -68,15 +68,12 @@ public class TestPeliculas {
 //        }
          
           
-          //Probando seleccionar pelicula por ID
-//        List<Cliente> clientes = clienteDAO.seleccionarPorNombre("Andre");
-//        if (clientes.isEmpty()) {
-//            System.out.println("No se encontraron registros");
-//        }else{
-//            clientes.forEach((cliente1) -> {
-//                System.out.println("Cliente: "+cliente1.getNombre());
-//            });
-//        }
+         // Probando seleccionar pelicula por ID
+        List<PeliculasCinerama> lista = peliculacine.buscarPelicula("ma");
+        for (PeliculasCinerama pelicula2 : lista){
+            System.out.println("Pelicula: "+ pelicula2.getPelicula());
+        }
+        }
                
     }
-}
+

@@ -21,36 +21,38 @@
         
         <%@include file="../WEB-INF/jspf/header.jspf" %>
         <%@include file="../WEB-INF/jspf/navegacion2.jspf" %>
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
         
 <section id="tabla-estrenos" class="padded">
     <div class="container">
         <h2>Lista de estrenos:</h2>
 
-        <table class="table table-dark table-striped table-bordered table-hover">
+        <table id="table" class="table table-dark table-striped table-bordered table-hover">
               <thead class="thead-dark">
                 <tr>
-                  <th scope="col">ID película</th>
+                  <th scope="col">ID</th>
                   <th scope="col">Película</th>
                   <th scope="col">Categoría</th>
                   <th scope="col">Información</th>
+                  <th scope="col">Director</th>
+                  <th scope="col">Reparto</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Detalle</th>
                 </tr>
               </thead>
               <tbody>
-              
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Jumanji: En la selva.</td>
-                  <td>Aventura.</td>
-                  <td><a href="#" ><button class="btn btn-success" type="button">Ver detalles</button></a></td>
-                </tr>
                 
               <c:forEach var="pelicula" items="${sessionScope.peliculas}">
                   <tr>
                       <td>${pelicula.movieID}</td>
                       <td>${pelicula.pelicula}</td>
+                      <td>${pelicula.estreno}</td>
                       <td>${pelicula.genero}</td>
-                      <td><a href="mantpeliculas/detallepeliculas.jsp" ><button class="btn btn-info" type="button">Ver detalles</button></a></td>
-                      <td><a href="peliculacineramacontroller?txtProcesoPelicula=detalle&id=${pelicula.movieID}" ><button class="btn btn-info" type="button">Ver detalles</button></a></td>
+                      <td>${pelicula.director}</td>
+                      <td>${pelicula.reparto}</td>
+                      <td>${pelicula.descripcion}</td>
+                      <td><a href="peliculacineramacontroller?txtProcesoPelicula=detalle&id=${pelicula.movieID}"><button class="btn btn-info" type="button">Ver detalles</button></a></td>
                   </tr>
               </c:forEach>
                 
@@ -61,9 +63,18 @@
   </section>
   
         <%@include file="../WEB-INF/jspf/scripts.jspf" %>
-        
+         <script type="text/javascript">
+            let progress = document.getElementById('progressbar');
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function(){
+                let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                progress.style.height = progressHeight + "%";
+            }
+        </script>
     
         <%@include file="../WEB-INF/jspf/footer.jspf" %>
+        <script src="resources/js/scripts.js" type="text/javascript"></script>
+        
     </body>
 </html>
 

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-            <div class="container">
+            <div class="container" id="barralateral">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -17,10 +17,10 @@
                   <a class="nav-link" href="#ubicanos">Nuestra ubicación</a>
                 </li>
            <li class="nav-item">
-            <a class="nav-link" href="#">Términos y condiciones</a>
+            <a class="nav-link" href="terminos-condiciones1.jsp">Términos y condiciones</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">política de privacidad</a>
+            <a class="nav-link" href="politicas-privacidad1.jsp">Políticas de privacidad</a>
           </li>
 
               </ul>
@@ -43,4 +43,10 @@
             </div>
       
             </div>
-          </nav> 
+          </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="progreso">
+            <div class="barra"></div>
+          </div>
+    </nav>

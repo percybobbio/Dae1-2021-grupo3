@@ -1,0 +1,68 @@
+<section id="encabezado">
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+                                                    <p></p>
+							<h4>Cinerama</h4>
+                                                        <li><a href="indexcine2.jsp">Volver al inicio</a></li>
+							<li><a href="indexcine2.jsp#informacion">Información</a></li>
+                                                        <li><a href="indexcine2.jsp#funcionarios">Funcionarios</a></li>
+                                                        <li><a href="indexcine2.jsp#combos">Combos</a></li>
+							<li><a href="indexcine2.jsp#galeria">Galería</a></li>
+                                                        <li><a href="indexcine2.jsp#ubicanos">Ubícanos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+                                                    <p></p>
+							<h4>Detalles</h4>
+							<li><a href="sistema.jsp">Lista de estrenos</a></li>
+                                                        <li><a href="proximamente.jsp">Próximamente</a></li>
+                                                        <li><a href="#peliculas">Buscar películas</a></li>
+                                                        <li><a href="lista-usuarios.jsp">Lista de usuarios</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+                                                    <p></p>
+							<h4>Acerca de</h4>
+                                                        <li><a href="comentarios.jsp">Comentarios</a></li>
+							<li><a href="terminos-condiciones2.jsp">Términos y condiciones</a></li>
+                                                        <li><a href="politicas-privacidad2.jsp">Política de privacidad</a></li>
+						</ul>
+					</div>
+                                    	<div class="col-md-2">
+						<ul class="footer_box">
+                                                    <p></p>
+						</ul>
+					</div>
+					<div class="col-md-1">
+                                            <p></p>
+                                            <ul class="navbar-nav mr-right">
+                                             <li class="nav-item">
+                                               <a class="nav-link" href="https://www.facebook.com/Cinerama-El-Pac%C3%ADfico-1218364891641961"><i class="fab fa-facebook-f"></i></a>
+                                             </li>
+                                             <li class="nav-item">
+                                               <a class="nav-link" href="https://twitter.com/cineramaclube"><i class="fab fa-twitter"></i></a>
+                                             </li>
+                                             <li class="nav-item">
+                                               <a class="nav-link" href="#https://www.youtube.com/cineramaoficial"><i class="fab fa-youtube"></i></a>
+                                             </li>
+                                             <li class="nav-item">
+                                               <a class="nav-link" href="https://www.instagram.com/cinerama_cine/"><i class="fab fa-instagram"></i></a>
+                                             </li>
+                                           </ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+                                        <p></p>
+			           <p>© 2021 Todos los derechos reservados de <a href="indexcine2.jsp">Cinerama.</a></p>
+		            </div>
+
+   				</div>
+			</div>
+		</div>
+        </section>

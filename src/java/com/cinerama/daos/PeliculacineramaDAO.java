@@ -147,7 +147,7 @@ public class PeliculacineramaDAO implements InterfacePelicula {
                 resultflag=true;                        
             }
         }catch (Exception e) {
-            System.out.println("Error al eliminar cliente");
+            System.out.println("Error al eliminar pelicula");
             e.printStackTrace();
         }finally{
             close();
@@ -171,4 +171,32 @@ public class PeliculacineramaDAO implements InterfacePelicula {
 
     
     }   
+
+    @Override
+    public List<PeliculasCinerama> buscarPelicula(String pelicula) {
+        List<PeliculasCinerama> list = new ArrayList<>();
+        final String SQL_SELECTEDBYNAME = "{CALL usp_SelectedByName(?)}";
+        try {
+            pstm = con.getConnection().prepareStatement(SQL_SELECTEDBYNAME);
+            pstm.setString(1, pelicula);
+            res = pstm.executeQuery();
+            while(res.next()){
+                PeliculasCinerama peliculas = new PeliculasCinerama();
+                peliculas.setMovieID(res.getInt(1));
+                peliculas.setPelicula(res.getString(2));
+                peliculas.setEstreno(res.getString(3));
+                peliculas.setGenero(res.getString(4));
+                peliculas.setDirector(res.getString(5));
+                peliculas.setReparto(res.getString(6));
+                peliculas.setDescripcion(res.getString(7));
+                list.add(peliculas);
+            }
+        } catch (Exception e) {
+            System.out.println("Error en la consulta por nombre");
+            e.printStackTrace();
+        }finally{
+            close();
+        }
+        return list;
+    }
 }

@@ -24,6 +24,8 @@
     <body>
         <%@include file="../WEB-INF/jspf/header.jspf" %>
         <%@include file="../WEB-INF/jspf/navegacion2.jspf" %>
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
 <p></p> 
 <section id="detalle-pelicula">
             <div class ="container-fluid">
@@ -39,20 +41,35 @@
                                 <input type="hidden" name="txtProcesoPelicula" id="txtProcesoPelicula" value="actualizar">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">ID</label>
-                                    <input type="text" class="form-control" id="txtID" placeholder="ID" value="<%=pelicula.getMovieID()%>" readonly="" >
+                                    <input type="text" class="form-control" name="txtID" id="txtID" placeholder="ID" value="<%=pelicula.getMovieID()%>" readonly="" >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nombre:</label>
-                                    <input type="text" class="form-control" id="txtNombrePelicula" placeholder="Nombre de la película" value="<%=pelicula.getPelicula()%>" readonly="">
+                                    <input type="text" class="form-control" name="txtNombrePelicula" id="txtNombrePelicula" placeholder="Nombre de la película" value="<%=pelicula.getPelicula()%>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Categoría:</label>
-                                    <input type="text" class="form-control" id="txtCategoriaPelicula" placeholder="Categoría de la película " value="<%=pelicula.getGenero()%>">
+                                    <label for="exampleInputPassword1">Estreno:</label>
+                                    <input type="text" class="form-control" name="txtEstrenoPelicula" id="txtEstrenoPelicula" placeholder="Estreno de la película " value="<%=pelicula.getEstreno()%>">
                                 </div>
-
-                                <button type="submit" class="btn btn-primary">Editar</button>
-                                <button type="submit" class="btn btn-primary">Listar</button>
-                                <button type="submit" class="btn btn-primary">Eliminar</button>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Categoria:</label>
+                                    <input type="text" class="form-control" name="txtCategoriaPelicula" id="txtCategoriaPelicula" placeholder="Categoría de la película " value="<%=pelicula.getGenero()%>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Director:</label>
+                                    <input type="text" class="form-control" name="txtDirectorPelicula" id="txtDirectorPelicula" placeholder="Director de la película " value="<%=pelicula.getDirector()%>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Reparto:</label>
+                                    <input type="text" class="form-control" name="txtRepartoPelicula" id="txtRepartoPelicula" placeholder="Reparto de la película " value="<%=pelicula.getReparto()%>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Descripción:</label>
+                                    <input type="text" class="form-control" name="txtDescripcionPelicula" id="txtDescripcionPelicula" placeholder="Descripcion de la película " value="<%=pelicula.getDescripcion()%>">
+                                </div>
+                               
+                                <button type="submit" name="txtProcesoPelicula" value="actualizar" class="btn btn-info">Actualizar</button>
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
                             </form>
                         </div>
                     </div>
@@ -93,7 +110,14 @@
         <%-- <%@include file="WEB-INF/jspf/footer8.jspf" %>--%>
     </body>
 </html>
-        
+         <script type="text/javascript">
+            let progress = document.getElementById('progressbar');
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
+            window.onscroll = function(){
+                let progressHeight = (window.pageYOffset / totalHeight) * 100;
+                progress.style.height = progressHeight + "%";
+            }
+        </script>
         <%@include file="../WEB-INF/jspf/footer.jspf" %>
     </body>
 </html>

@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container" id="barralateral">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto" id="menu-main">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.jsp">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.jsp#informacion">Información</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.jsp#funcionarios">Funcionarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.jsp#combos">Combos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.jsp#galeria">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.jsp#ubicanos">Ubícanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="terminos-condiciones1.jsp">Términos y condiciones</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Políticas de privacidad
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#politicas">Políticas de privacidad</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#habilidad">Nuestra codificación</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#equipo">Nuestro equipo</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#acerca-de">Acerca de nosotros</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#galeria">Galería de Cinerama</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#ubicanos">Nuestra ubicación</a>
+            </div>
+          </li>
+        </ul>
+            
+       <ul class="navbar-nav mr-right">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/Cinerama-El-Pac%C3%ADfico-1218364891641961"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/cineramaclube"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/cineramaoficial"><i class="fab fa-youtube"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.instagram.com/cinerama_cine/"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>   
+
+      </div>
+
+      <form class="nav-item">
+        <a href="logincine.jsp" ><button class="btn btn-success" type="button">Iniciar Sesión</button></a>
+      </form>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="progreso">
+            <div class="barra"></div>
+          </div>
+    </nav>

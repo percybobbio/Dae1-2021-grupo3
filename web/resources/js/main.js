@@ -50,4 +50,18 @@ $(function(){
             $(this).remove();
         })
     })
+   
 })
+
+window.addEventListener("scroll", function(){
+progreso();
+menu();
+})
+
+function progreso(){
+    let scroll = document.documentElement.scrollTop;
+    //console.log("El progreso es este " + progreso)
+    let alto = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let progreso = (scroll/alto)*100;
+    document.getElementsByClassName("barra")[0].style.width = progreso+"%";
+}

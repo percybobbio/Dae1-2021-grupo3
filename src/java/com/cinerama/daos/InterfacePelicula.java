@@ -6,11 +6,12 @@
 package com.cinerama.daos;
 
 import com.cinerama.entidades.PeliculasCinerama;
+import java.util.List;
 
 /**
  *
  * @author REIV5
  */
 public interface InterfacePelicula extends ICRUD<PeliculasCinerama> {
-    
+    List<PeliculasCinerama> buscarPelicula(String pelicula);
 }

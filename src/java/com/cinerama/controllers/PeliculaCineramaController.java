@@ -101,8 +101,35 @@ public class PeliculaCineramaController extends HttpServlet {
         request.getRequestDispatcher("mantpeliculas/detallepeliculas.jsp").forward(request, response);
     }
 
-    private void actualizar(HttpServletRequest request, HttpServletResponse response) {
+    
+    private void actualizar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String nombre = request.getParameter("txtNombrePelicula");        
+        String estreno = request.getParameter("txtEstrenoPelicula");
+        String categoria = request.getParameter("txtCategoriaPelicula");
+        String director = request.getParameter("txtDirectorPelicula");
+        String reparto = request.getParameter("txtRepartoPelicula");
+        String descripcion = request.getParameter("txtDescripcionPelicula");
+        Integer id = Integer.parseInt(request.getParameter("txtID"));
         
+            PeliculasCinerama pelicula2 = new PeliculasCinerama();
+            pelicula2.setPelicula(nombre);
+            pelicula2.setEstreno(estreno);
+            pelicula2.setGenero(categoria);
+            pelicula2.setDirector(director);
+            pelicula2.setReparto(reparto);
+            pelicula2.setDescripcion(descripcion);
+            pelicula2.setMovieID(id);
+      
+            PeliculacineramaDAO peliculaDAO = new PeliculacineramaDAO();
+            //request.getSession().setAttribute("peliculas", pelicula1);
+            if (peliculaDAO.actualizar(pelicula2)) {
+                request.getRequestDispatcher("peliculacineramacontroller?txtProcesoPelicula=seleccionarTodo").forward(request, response);
+            }else{
+                request.getRequestDispatcher("errorcine.jsp").forward(request, response);
+            }
+            }  
     }
 
-}
+    
+
+

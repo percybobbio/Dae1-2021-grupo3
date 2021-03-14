@@ -1,11 +1,10 @@
-
-   <section id="encabezado">
+<section id="encabezado">
 		<div class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3">
 						<ul class="footer_box">
-                                                    
+                                                    <p></p>
 							<h4>Cinerama</h4>
                                                         <li><a href="index.jsp">Inicio</a></li>
                                                         <li><a href="logincine.jsp">Iniciar sesión</a></li>
@@ -18,16 +17,16 @@
 						<ul class="footer_box">
                                                     <p></p>
 							<h4>Nosotros</h4>
-                                                        <li><a href="#combos">Combos</a></li>
-							<li><a href="#galeria">Galería</a></li>
+                                                        <li><a href="index.jsp#combos">Combos</a></li>
+							<li><a href="index.jsp#galeria">Galería</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3">
 						<ul class="footer_box">
                                                     <p></p>
 							<h4>Acerca de</h4>
-							<li><a href="#">Términos y condiciones</a></li>
-                                                        <li><a href="#">Política de privacidad</a></li>
+							<li><a href="terminos-condiciones1.jsp">Términos y condiciones</a></li>
+                                                        <li><a href="politicas-privacidad1.jsp">Política de privacidad</a></li>
 						</ul>
 					</div>
                                     	<div class="col-md-2">

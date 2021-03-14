@@ -1,26 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <div class="container">
+      <div class="container" id="barralateral">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto" id="menu-main">
-
-
           <li class="nav-item">
             <a class="nav-link" href="indexcine2.jsp">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Información
+              Cinerama
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#informacion">Información</a>
+              <a class="dropdown-item" href="indexcine2.jsp#informacion">Información</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#funcionarios">Funcionarios</a>
+              <a class="dropdown-item" href="indexcine2.jsp#funcionarios">Funcionarios</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#combos">Combos</a>
+              <a class="dropdown-item" href="indexcine2.jsp#combos">Combos</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#galeria">Galería</a>
               <div class="dropdown-divider"></div>
@@ -34,9 +31,9 @@
               Cartelera
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="lista-estrenos.jsp">Lista de Estrenos</a>
+              <a class="dropdown-item" href="sistema.jsp">Lista de Estrenos</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Proximamente</a>
+              <a class="dropdown-item" href="proximamente.jsp">Proximamente</a>
           </div>
           </li>
           
@@ -45,22 +42,20 @@
               Registros
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="nav-link" href="peliculacineramacontroller?txtProcesoPelicula=seleccionarTodo">Listar películas</a>
+            <a class="dropdown-item" href="peliculacineramacontroller?txtProcesoPelicula=seleccionarTodo">Buscar películas</a>
               <div class="dropdown-divider"></div>
-            <a class="nav-link" href="lista-usuarios.jsp">Lista de usuarios</a>
+            <a class="dropdown-item" href="#">Lista de usuarios</a>
           </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Comentarios</a>
+            <a class="nav-link" href="comentarios.jsp">Comentarios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Términos y condiciones</a>
+            <a class="nav-link" href="terminos-condiciones2.jsp">Términos y condiciones</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">política de privacidad</a>
+            <a class="nav-link" href="politicas-privacidad2.jsp">Políticas de privacidad</a>
           </li>
-
-
         </ul>
             
        <ul class="navbar-nav mr-right">
@@ -80,9 +75,19 @@
             
       </div>
 
-
       <form class="nav-item">
         <a href="index.jsp" ><button class="btn btn-success" type="button">Cerrar Sesión</button></a>
       </form>
       </div>
-    </nav> 
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="progreso">
+            <div class="barra"></div>
+          </div>
+    </nav>
+
+       
+
+
+
